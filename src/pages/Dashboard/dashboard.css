@@ -1,0 +1,8 @@
+.containerDasboard {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 80% !important;
+    max-width: 80% !important;
+}
