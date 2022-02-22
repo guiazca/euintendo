@@ -32,10 +32,11 @@ body {
 }
 
 .description{
-    width: 85%;
+    width: 90%;
     margin: auto;
     margin-top: 20px;
     text-align: justify;
+    margin-bottom: 30px;
 }
 
 .title {

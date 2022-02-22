@@ -7,7 +7,7 @@ export default createGlobalStyle`
     @font-face {
         font-family: 'SuperMario';
         src: local('SuperMario'), 
-        url(${SuperMario}) format('ttf');
+        url(${SuperMario}) format('truetype');
         font-weight: 300;
         font-style: normal;
     }

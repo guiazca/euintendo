@@ -4,11 +4,10 @@ export const HeaderDiv = styled.div`
     height: 80px;
     text-align: center;
     margin-bottom: 30px;
-    font-size: 50px;
+    font-size: 3rem;
     h1 {
-        font-family: fantasy;
+        font-family: SuperMario;
         font-weight: bolder;
-        color:  t; 
     }
     
 `
