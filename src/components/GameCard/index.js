@@ -1,11 +1,13 @@
 import React from "react"
 import { Box, Image, Badge } from '@chakra-ui/react'
 import { StarIcon } from '@chakra-ui/icons'
+import { Link } from 'react-router-dom'
 import './gameCard.css'
 
 let games = require("../../constants/cleanGames.json")
 
 export default function GameCard() {
+
    return (
        <>
        {games.map((_,i) => {
@@ -26,11 +28,11 @@ export default function GameCard() {
                 fontSize='xs'
                 textTransform='uppercase'
                 ml='2'
-              >
+                >
                   {games[i].genres.map((_,genresIndex) => {
                       return `${games[i].genres[genresIndex].name} `
                   })}
-                   </Box>
+              </Box>
               </Box>
       
               <Box
@@ -40,7 +42,9 @@ export default function GameCard() {
                 lineHeight='tight'
                 isTruncated
               >
+                <Link to={`/Detail/${games[i].id}`}>
                 {games[i].name_original}
+                </Link>
               </Box>
       
              <Box display='flex' mt='2' alignItems='center'>

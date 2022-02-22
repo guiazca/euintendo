@@ -11,7 +11,7 @@ export default function MainRoutes(){
     return (
         <Routes>
             <Route path='/' element={<Dashboard />}/>
-            <Route path='/Detail' element={<Detail />}/>
+            <Route path='/Detail/:id' element={<Detail />}/>
         </Routes>
     )
 }
