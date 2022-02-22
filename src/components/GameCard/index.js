@@ -3,7 +3,7 @@ import { Box, Image, Badge } from '@chakra-ui/react'
 import { StarIcon } from '@chakra-ui/icons'
 import './gameCard.css'
 
-import { games } from '../../constants/games'
+let games = require("../../constants/cleanGames.json")
 
 export default function GameCard() {
    return (
