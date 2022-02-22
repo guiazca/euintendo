@@ -13,6 +13,7 @@ export default function GameCard() {
        {games.map((_,i) => {
            console.log(games[i])
            return (
+            <Link to={`/Detail/${games[i].id}`}>
             <Box className="box" maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden' marginBottom="30px" height="100px">
             <Image src={games[i].background_image} alt={`${games[i].name_original} game`} />
       
@@ -33,20 +34,16 @@ export default function GameCard() {
                       return `${games[i].genres[genresIndex].name} `
                   })}
               </Box>
-              </Box>
-      
+              </Box>      
               <Box
                 mt='1'
                 fontWeight='semibold'
                 as='h4'
                 lineHeight='tight'
                 isTruncated
-              >
-                <Link to={`/Detail/${games[i].id}`}>
-                {games[i].name_original}
-                </Link>
-              </Box>
-      
+              >                
+                {games[i].name_original}               
+              </Box>      
              <Box display='flex' mt='2' alignItems='center'>
                 {Array(5)
                   .fill('')
@@ -59,6 +56,7 @@ export default function GameCard() {
               </Box>
             </Box>
           </Box>
+          </Link>
            )
             
        })}
