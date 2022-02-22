@@ -10,7 +10,6 @@ export default function Dashboard() {
         <>
         <Header />
         <Container className="containerDasboard">
-           
             <GameCard />
         </Container>
         </>
