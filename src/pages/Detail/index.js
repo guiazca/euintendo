@@ -1,6 +1,5 @@
 import React from "react"
 import { useParams } from 'react-router-dom'
-import { elementSelectorParser } from "tailwindcss/lib/lib/resolveDefaultsAtRules";
 import { Container, Box, Badge } from "@chakra-ui/react"
 import styles from "./Image.module.css"
 let games = require("../../constants/cleanGames.json")
