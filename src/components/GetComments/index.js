@@ -1,12 +1,11 @@
 
 import React, { useEffect, useState } from 'react'
-import { collection, getDocs, onSnapshot, orderBy } from "firebase/firestore"
+import { collection, onSnapshot } from "firebase/firestore"
 import "./styles.css"
 
 import { db } from '../../firebase'
 
 export default function GetComment(gameID) {
-    const commentsCollectionRef = collection(db, "comments")
     const [comment, setComment] = useState([])
 
 

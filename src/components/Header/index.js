@@ -5,14 +5,14 @@ import { HeaderDiv } from './styles'
 import { useAuthState } from "react-firebase-hooks/auth";
 
 export default function Header(){
-    const [user, loading, error] = useAuthState(auth);
+    const [user, loading] = useAuthState(auth);
     const navigate = useNavigate();
     const location = useLocation();
     
     useEffect(() => {
         if (loading) return;
         if (!user) return navigate("/");
-      }, [user, loading]);
+      }, [navigate, user, loading]);
   
     return (
             <HeaderDiv>

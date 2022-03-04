@@ -7,13 +7,13 @@ import "./ResetPassword.css";
 
 function ResetPassword() {
   const [email, setEmail] = useState("");
-  const [user, loading, error] = useAuthState(auth);
+  const [user, loading] = useAuthState(auth);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (loading) return;
     if (user) navigate("/");
-  }, [user, loading]);
+  }, [user, loading, navigate]);
 
   return (
     <div className="reset">
