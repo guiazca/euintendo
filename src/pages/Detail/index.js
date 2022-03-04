@@ -3,15 +3,16 @@ import { useParams } from 'react-router-dom'
 import { Container, Box, Badge } from "@chakra-ui/react"
 import styles from "./Image.module.css"
 import Header from '../../components/Header'
+import NewComment from "../../components/NewComments"
+import GetComments from "../../components/GetComments" 
 let games = require("../../constants/cleanGames.json")
 
 
 export default function Detail() {
+
     const { id } = useParams();
-    console.log(typeof id)
-    console.log(id)
     const gameID = games.find(game => game.id === parseInt(id))
-    console.log(gameID)
+
     return (
         <>
         <Header />
@@ -40,7 +41,10 @@ export default function Detail() {
             <div className={styles.description}>
                 <p className={styles.title}>Descrição</p>
                 <p>{gameID.description_raw}</p>
-            </div>            
+            </div>
+                    
+            <NewComment gameID={gameID}/>
+            <GetComments gameID={gameID}/>   
         </Container>         
 
         </>

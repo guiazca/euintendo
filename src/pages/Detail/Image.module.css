@@ -42,3 +42,9 @@ body {
 .title {
     font-weight: bolder;
 }
+
+.textArea {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
